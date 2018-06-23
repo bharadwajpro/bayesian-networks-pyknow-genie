@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- This network was created in GeNIe Academic, which can be used for educational and research purposes only -->
+<smile version="1.0" id="Network1" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Personnel">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="See_Personnel">
+			<state id="True" />
+			<state id="False" />
+			<parents>Personnel</parents>
+			<probabilities>0.6 0.4 0 1</probabilities>
+		</cpt>
+		<cpt id="Slow_traffic">
+			<state id="True" />
+			<state id="False" />
+			<parents>Personnel</parents>
+			<probabilities>0.8 0.2 0.3 0.7</probabilities>
+		</cpt>
+		<cpt id="Speed">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Fine_Chit">
+			<state id="True" />
+			<state id="False" />
+			<parents>Personnel Speed</parents>
+			<probabilities>0.5 0.5 0 1 0 1 0 1</probabilities>
+		</cpt>
+		<cpt id="On_Time">
+			<state id="True" />
+			<state id="False" />
+			<parents>Speed Fine_Chit Slow_traffic</parents>
+			<probabilities>0 1 0 1 0.9 0.09999999999999998 0.9 0.09999999999999998 0.5 0.5 0.5 0.5 0.1 0.9 0.3 0.7</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.2.2601.0 ACADEMIC" name="Network1" faultnameformat="nodestate">
+			<node id="Personnel">
+				<name>Personnel</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Times New Roman" size="16" bold="true" />
+				<position>497 58 602 123</position>
+			</node>
+			<node id="See_Personnel">
+				<name>See-Personnel</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Times New Roman" size="16" bold="true" />
+				<position>488 216 628 303</position>
+			</node>
+			<node id="Slow_traffic">
+				<name>Slow-traffic</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Times New Roman" size="16" bold="true" />
+				<position>685 223 805 298</position>
+			</node>
+			<node id="Fine_Chit">
+				<name>Fine Chit</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Times New Roman" size="16" bold="true" />
+				<position>343 228 443 290</position>
+			</node>
+			<node id="Speed">
+				<name>Speed</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Times New Roman" size="16" bold="true" />
+				<position>331 70 407 117</position>
+			</node>
+			<node id="On_Time">
+				<name>On-Time</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Times New Roman" size="16" bold="true" />
+				<position>188 463 284 523</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>
